@@ -1,0 +1,18 @@
+<div>
+    <h1>{{ $t('app.currency.result.title', { value: value }) }}</h1>
+
+    <table class="ui definition fixed table">
+        <tbody>
+        <tr v-for="item in items">
+            <td class="right aligned">{{ item.id }} - {{ item.currencyName }}</td>
+            <td>{{ item.value | currency(item.currencySymbol+' ', item.id === 'BTC' ? 8 : 2) }}</td>
+        </tr>
+        </tbody>
+    </table>
+
+    <router-link to="/">
+        <button class="ui button primary">
+            {{ $t('app.currency.result.back') }}
+        </button>
+    </router-link>
+</div>

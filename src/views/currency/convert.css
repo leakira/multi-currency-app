@@ -1,0 +1,7 @@
+.ui.checkbox label {
+    cursor: default;
+}
+
+.ui.form .field.submit {
+    margin-top: 3em;
+}

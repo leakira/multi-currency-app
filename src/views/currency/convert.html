@@ -1,0 +1,33 @@
+<div>
+    <h1>{{ $t('app.currency.convert.title') }}</h1>
+
+    <form class="ui form" v-on:submit.prevent="onSubmit">
+        <div class="two fields">
+            <div class="field">
+                <label for="value">{{ $t('app.currency.convert.value.input') }}</label>
+                <input id="value" type="text" v-model="model.value" :placeholder="$t('app.currency.convert.value.placeholder')">
+            </div>
+            <div class="field">
+                <label for="from">{{ $t('app.currency.convert.from.input') }}</label>
+                <select id="from" class="ui fluid dropdown" v-model="model.from">
+                    <option value="">-----</option>
+                    <option v-for="item in items" :value="item.id">{{ item.id }} ({{ item.currencyName }})</option>
+                </select>
+            </div>
+        </div>
+
+        <div class="field">
+            <label>{{ $t('app.currency.convert.to.input') }}</label>
+            <div class="ui grid">
+                <div class="four wide column ui checkbox" v-for="item in items">
+                    <input type="checkbox" :id="'to-'+item.id" :value="item.id" v-model="model.to">
+                    <label :for="'to-'+item.id" :title="item.currencyName">{{ item.id }}</label>
+                </div>
+            </div>
+        </div>
+
+        <div class="field submit">
+            <button class="fluid ui button primary">{{ $t('app.currency.convert.submit') }}</button>
+        </div>
+    </form>
+</div>
