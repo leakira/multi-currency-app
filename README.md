@@ -1,4 +1,6 @@
-# multi-currency-app
+# Multi Currency
+
+[![Netlify Status](https://api.netlify.com/api/v1/badges/c9607432-77d5-43ce-b772-880deca11f84/deploy-status)](https://app.netlify.com/sites/multi-currency/deploys)
 
 > A Vue.js project
 
