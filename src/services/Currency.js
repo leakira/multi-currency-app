@@ -22,7 +22,7 @@ export default class Currency
     }
 
     static formatParams(params={}) {
-        if (!params || params.length == 0) return ''
+        if (!params || params.length === 0) return ''
 
         let queryString = []
         Object.keys(params).forEach(k => queryString.push(k+'='+params[k]))
