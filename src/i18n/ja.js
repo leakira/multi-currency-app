@@ -8,16 +8,17 @@ export default {
         language: {
             text: '言語',
             options: {
-                en: '英語',
-                ja: '日本語',
+                en:    '英語',
+                ja:    '日本語',
                 pt_BR: 'ポルトガル語 (ブラジル)',
+                es:    'スペイン語',
             },
         },
         currency: {
             list: {
-                title: '通過の詳細リスト',
-                code: 'コード',
-                name: '名前',
+                title:  '通過の詳細リスト',
+                code:   'コード',
+                name:   '名前',
                 symbol: 'シンボル',
             },
             convert: {
@@ -39,7 +40,7 @@ export default {
             },
             result: {
                 title: '{value}の見積もり',
-                back: '新しく見積もりをする',
+                back:  '新しく見積もりをする',
             },
         }
     }

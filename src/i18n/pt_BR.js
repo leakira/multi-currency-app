@@ -8,16 +8,17 @@ export default {
         language: {
             text: 'Idioma',
             options: {
-                en: 'Inglês',
-                ja: 'Japonês',
+                en:    'Inglês',
+                ja:    'Japonês',
                 pt_BR: 'Português (Brasil)',
+                es:    'Espanhol',
             },
         },
         currency: {
             list: {
-                title: 'Lista detalhada das moedas',
-                code: 'Código',
-                name: 'Nome',
+                title:  'Lista detalhada das moedas',
+                code:   'Código',
+                name:   'Nome',
                 symbol: 'Símbolo',
             },
             convert: {
@@ -39,7 +40,7 @@ export default {
             },
             result: {
                 title: 'Cotação para {value}',
-                back: 'Nova cotação',
+                back:  'Nova cotação',
             },
         }
     }

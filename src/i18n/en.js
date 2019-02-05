@@ -8,16 +8,17 @@ export default {
         language: {
             text: 'Language',
             options: {
-                en: 'English',
-                ja: 'Japanese',
+                en:    'English',
+                ja:    'Japanese',
                 pt_BR: 'Portuguese (Brazil)',
+                es:    'Spanish',
             },
         },
         currency: {
             list: {
-                title: 'Detailed currency list',
-                code: 'Code',
-                name: 'Name',
+                title:  'Detailed currency list',
+                code:   'Code',
+                name:   'Name',
                 symbol: 'Symbol',
             },
             convert: {
@@ -39,7 +40,7 @@ export default {
             },
             result: {
                 title: 'Quotation for {value}',
-                back: 'New quotation',
+                back:  'New quotation',
             },
         }
     }

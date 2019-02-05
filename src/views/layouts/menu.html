@@ -1,21 +1,21 @@
 <div class="ui fixed menu">
     <div class="ui container">
-        <router-link to="/" class="header item">
+        <router-link :to="redirectTo({ path: '/' })" class="header item">
             {{ $t('app.name') }}
         </router-link>
 
         <div class="right menu">
-            <router-link to="/" :class="'item '+isActive('CurrencyConvert')">
+            <router-link :to="redirectTo({ path: '/' })" :class="'item '+isActive('CurrencyConvert')">
                 {{ $t('app.menu.convert') }}
             </router-link>
-            <router-link to="/currency" :class="'item '+isActive('CurrencyList')">
+            <router-link :to="redirectTo({ path: '/currency' })" :class="'item '+isActive('CurrencyList')">
                 {{ $t('app.menu.list') }}
             </router-link>
 
             <div class="ui simple dropdown item">
                 {{ $t('app.language.text') }} <i class="dropdown icon"></i>
                 <div class="menu">
-                    <a class="item" v-for="option in language">{{ $t('app.language.options.'+option) }}</a>
+                    <router-link :to="redirectTo({ lang: option })" class="item" v-for="option in language">{{ $t('app.language.options.'+option) }}</router-link>
                 </div>
             </div>
         </div>

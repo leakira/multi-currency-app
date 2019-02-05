@@ -4,17 +4,17 @@ import CurrencyConvertResult from '@/controllers/CurrencyConvertResult'
 
 export default [
     {
-        path: '/',
+        path: '',
         name: 'CurrencyConvert',
         component: CurrencyConvert,
     },
     {
-        path: '/result',
+        path: 'result',
         name: 'CurrencyConvertResult',
         component: CurrencyConvertResult,
     },
     {
-        path: '/currency',
+        path: 'currency',
         name: 'CurrencyList',
         component: CurrencyList,
     },

@@ -12,7 +12,7 @@
             }
         },
         mounted () {
-            this.$parent.$refs.progress.start()
+            this.$parent.progress().start()
             Currency.findAll()
                 .then(response => {
                     this.setData(response.data)
@@ -23,7 +23,7 @@
         },
         methods: {
             setData (response) {
-                this.$parent.$refs.progress.done()
+                this.$parent.progress().done()
                 if (response.success) {
                     this.items = response.data
                 } else {

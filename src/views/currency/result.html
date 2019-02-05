@@ -10,7 +10,7 @@
         </tbody>
     </table>
 
-    <router-link to="/">
+    <router-link :to="$parent.redirectTo({ path: '/' })">
         <button class="ui button primary">
             {{ $t('app.currency.result.back') }}
         </button>

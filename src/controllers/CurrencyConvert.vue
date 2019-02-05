@@ -24,7 +24,7 @@
             }
         },
         mounted () {
-            this.$parent.$refs.progress.start()
+            this.$parent.progress().start()
             Currency.findAll({ sort: 'most_used' })
                 .then(response => {
                     this.setData(response.data)
@@ -35,7 +35,7 @@
         },
         methods: {
             setData (response) {
-                this.$parent.$refs.progress.done()
+                this.$parent.progress().done()
                 if (response.success) {
                     this.items = response.data
                 } else {
@@ -58,7 +58,7 @@
                 if (this.validateModel(this.model)) {
                     this.model.fromSymbol = this.items[this.model.from].currencySymbol
                     this.$route.params.model = this.model
-                    router.push('/result')
+                    router.push(this.$parent.redirectTo({ path: '/result' }))
                 }
             },
         },

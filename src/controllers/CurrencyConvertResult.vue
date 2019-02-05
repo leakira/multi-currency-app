@@ -27,11 +27,11 @@
             }
         },
         mounted () {
-            this.$parent.$refs.progress.start()
+            this.$parent.progress().start()
         },
         methods: {
             setData (model, response) {
-                this.$parent.$refs.progress.done()
+                this.$parent.progress().done()
                 this.value = model.fromSymbol+' '+model.value+' ('+model.from+')'.trim()
                 if (response.success) {
                     this.items = response.data
