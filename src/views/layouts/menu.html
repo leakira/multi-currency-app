@@ -15,7 +15,11 @@
             <div class="ui simple dropdown item">
                 {{ $t('app.language.text') }} <i class="dropdown icon"></i>
                 <div class="menu">
-                    <router-link :to="redirectTo({ lang: option })" class="item" v-for="option in language">{{ $t('app.language.options.'+option) }}</router-link>
+                    <router-link :to="redirectTo({ lang: option })"
+                                 class="item"
+                                 v-for="option in language"
+                                 :key="option"
+                    >{{ $t('app.language.options.'+option) }}</router-link>
                 </div>
             </div>
         </div>
