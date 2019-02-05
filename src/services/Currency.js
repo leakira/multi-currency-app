@@ -18,7 +18,7 @@ export default class Currency
     }
 
     static url(path='', params={}) {
-        return 'http://multi-currency-api.herokuapp.com/'+path+this.formatParams(params)
+        return 'https://multi-currency-api.herokuapp.com/'+path+this.formatParams(params)
     }
 
     static formatParams(params={}) {
