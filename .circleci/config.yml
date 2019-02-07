@@ -21,6 +21,7 @@ jobs:
             - persist_to_workspace:
                   root: .
                   paths: .
+
     # Run NightWatch End-2-End Tests
     e2e_tests:
         docker:
