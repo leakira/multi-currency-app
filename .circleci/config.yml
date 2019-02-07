@@ -3,6 +3,7 @@ jobs:
     build:
         docker:
             - image: circleci/node:8.11.2
+            - image: circleci/openjdk:8-jdk-browsers
         parallelism: 1
         working_directory: ~/app
         steps:
