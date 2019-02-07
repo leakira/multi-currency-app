@@ -23,8 +23,8 @@ jobs:
                   key: multi-currency-app-{{ checksum "yarn.lock" }}
                   paths:
                       - ./node_modules
-            - run: yarn build
+            - run: npm run build
             - persist_to_workspace:
                   root: .
                   paths: dist
-            - run: yarn test --coverage
+            - run: npm test --coverage
