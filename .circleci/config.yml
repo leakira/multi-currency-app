@@ -1,7 +1,7 @@
 version: 2
 jobs:
     # Checkout code from Github, Install, & cache deps/devDeps.
-    checkout_code:
+    build:
         docker:
             - image: circleci/node:8.11-browsers
         working_directory: ~/vue-circleci
