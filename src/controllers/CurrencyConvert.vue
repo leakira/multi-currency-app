@@ -1,5 +1,5 @@
 <template src="../views/currency/convert.html"></template>
-<style src="../views/currency/convert.css"></style>
+<style scoped src="../views/currency/convert.css"></style>
 
 <script>
     import Currency from '@/services/Currency'

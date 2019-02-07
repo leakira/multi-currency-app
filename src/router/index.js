@@ -6,6 +6,7 @@ import RouterRoot from '@/controllers/RouterRoot'
 
 // Routes
 import currency from './currency'
+import error from './error'
 
 Vue.use(Router)
 export default new Router({
@@ -16,6 +17,7 @@ export default new Router({
             component: RouterRoot,
             children: [
                 ...currency,
+                ...error,
             ],
         },
         {
@@ -23,6 +25,7 @@ export default new Router({
             component: RouterRoot,
             children: [
                 ...currency,
+                ...error,
             ],
         },
     ]

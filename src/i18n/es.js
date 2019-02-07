@@ -53,6 +53,10 @@ export default {
                 title: 'Cotización para {value}',
                 back: 'Nueva cotización',
             },
-        }
+        },
+        error: {
+            notFound: 'Página no encontrada',
+            description: 'La página que busca puede no existir',
+        },
     }
 }

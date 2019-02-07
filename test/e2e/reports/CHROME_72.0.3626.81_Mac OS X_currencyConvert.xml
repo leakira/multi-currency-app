@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<testsuites errors="0"
+            failures="0"
+            tests="2">
+
+  <testsuite name="currencyConvert"
+    errors="0" failures="0" hostname="" id="" package="currencyConvert" skipped="0"
+    tests="2" time="15.05" timestamp="Thu, 07 Feb 2019 19:15:58 GMT">
+  
+    <testcase name="CurrencyConvert" classname="currencyConvert" time="9.867" assertions="9">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    </testcase>
+  
+    <testcase name="CurrencyConvertResult" classname="currencyConvert" time="5.179" assertions="4">
+
+    
+
+    
+
+    
+
+    
+    </testcase>
+  
+
+  
+
+  
+  </testsuite>
+</testsuites>

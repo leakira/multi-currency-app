@@ -17,7 +17,7 @@
         </div>
 
         <div class="field">
-            <label>{{ $t('app.currency.convert.to.input') }}</label>
+            <label for="to">{{ $t('app.currency.convert.to.input') }}</label>
             <div class="ui grid">
                 <div class="four wide column ui checkbox" v-for="item in items">
                     <input type="checkbox" :id="'to-'+item.id" :value="item.id" v-model="model.to">

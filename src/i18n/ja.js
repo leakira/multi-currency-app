@@ -54,6 +54,10 @@ export default {
                 title: '{value}の見積もり',
                 back:  '新しく見積もりをする',
             },
-        }
+        },
+        error: {
+            notFound: 'Not found',
+            description: 'お探しのページが見つかりませんでした',
+        },
     }
 }

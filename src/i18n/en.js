@@ -58,6 +58,10 @@ export default {
                 title: 'Quotation for {value}',
                 back:  'New quotation',
             },
-        }
+        },
+        error: {
+            notFound: 'Page not found',
+            description: 'The page you are looking for may not exist',
+        },
     }
 }

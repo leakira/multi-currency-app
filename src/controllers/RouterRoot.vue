@@ -20,10 +20,15 @@
     }
 
     function languageRedirector(to, from, next) {
+        if (to.params.lang === '404') return next()
+
         window.scrollTo(0,0)
         let language = to.params.lang || i18n.fallbackLocale
-        if (languageIsValid(i18n, language) && i18n.locale !== to.params.lang)
-            i18n.locale = language
-        next()
+        if (languageIsValid(i18n, language)) {
+            if (i18n.locale !== to.params.lang) i18n.locale = language
+            next()
+        } else {
+            next('/404')
+        }
     }
 </script>
