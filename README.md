@@ -1,32 +1,12 @@
 # Multi Currency
 
 [![Netlify Status](https://api.netlify.com/api/v1/badges/c9607432-77d5-43ce-b772-880deca11f84/deploy-status)](https://app.netlify.com/sites/multi-currency/deploys)
+[![License](http://img.shields.io/badge/license-MIT-green.svg?style=flat)](LICENSE)
 
-> A Vue.js project
+Vue.js app to manage multi-currency api
 
-## Build Setup
+## Test using
+https://multi-currency.netlify.com/
 
-``` bash
-# install dependencies
-npm install
-
-# serve with hot reload at localhost:8080
-npm run dev
-
-# build for production with minification
-npm run build
-
-# build for production and view the bundle analyzer report
-npm run build --report
-
-# run unit tests
-npm run unit
-
-# run e2e tests
-npm run e2e
-
-# run all tests
-npm test
-```
-
-For a detailed explanation on how things work, check out the [guide](http://vuejs-templates.github.io/webpack/) and [docs for vue-loader](http://vuejs.github.io/vue-loader).
+## License
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details
