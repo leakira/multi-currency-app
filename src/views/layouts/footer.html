@@ -1,0 +1,23 @@
+<div class="ui vertical footer segment">
+    <div class="ui center aligned container">
+        <div class="ui stackable three column divided grid">
+            <div class="column">
+                <p>{{ $t('app.footer.author.description') }} <a href="https://github.com/leakira" class="item">
+                    {{ $t('app.footer.author.name') }} ({{ $t('app.footer.author.github') }})
+                </a></p>
+            </div>
+
+            <div class="column">
+                <p><a :href="this.$i18n.t('app.footer.source.url')" class="item">{{ $t('app.footer.source.description') }}</a></p>
+            </div>
+
+            <div class="column">
+                <p>{{ $t('app.footer.credit.description') }} <a :href="this.$i18n.t('app.footer.credit.url')" class="item">
+                    {{ $t('app.footer.credit.name') }}
+                </a></p>
+            </div>
+        </div>
+        <div class="ui section divider"></div>
+        <h4>{{ $t('app.name') }}</h4>
+    </div>
+</div>

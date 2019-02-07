@@ -14,6 +14,22 @@ export default {
                 es:    'Spanish',
             },
         },
+        footer: {
+            author: {
+                description: 'Developed by',
+                name: 'Leandro Akira',
+                github: '@leakira',
+            },
+            source: {
+                description: 'Github source code',
+                url: 'https://github.com/multi-currency/app',
+            },
+            credit: {
+                description: 'Using',
+                name: 'Vue.js',
+                url: 'https://vuejs.org/',
+            },
+        },
         currency: {
             list: {
                 title:  'Detailed currency list',

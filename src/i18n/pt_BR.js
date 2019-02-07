@@ -14,6 +14,17 @@ export default {
                 es:    'Espanhol',
             },
         },
+        footer: {
+            author: {
+                description: 'Desenvolvido por',
+            },
+            source: {
+                description: 'Código fonte no Github',
+            },
+            credit: {
+                description: 'Usando',
+            },
+        },
         currency: {
             list: {
                 title:  'Lista detalhada das moedas',

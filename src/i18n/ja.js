@@ -14,6 +14,18 @@ export default {
                 es:    'スペイン語',
             },
         },
+        footer: {
+            author: {
+                description: '開発者',
+                name: '高木 明',
+            },
+            source: {
+                description: 'Githubソースコード',
+            },
+            credit: {
+                description: '使用ツール',
+            },
+        },
         currency: {
             list: {
                 title:  '通過の詳細リスト',
