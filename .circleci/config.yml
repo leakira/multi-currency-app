@@ -2,16 +2,11 @@ version: 2
 jobs:
     build:
         docker:
-            - image: circleci/node:7.10.0-browsers
+            - image: webpackcontrib/circleci-jdk9-node8
         parallelism: 1
         working_directory: ~/app
         steps:
             - checkout
-
-            - run:
-                name: Configure dependencies
-                command: |
-                    sudo apt-get install -t openjdk-8-jdk
 
             - attach_workspace:
                   at: ~/app
