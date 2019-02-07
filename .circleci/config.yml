@@ -1,0 +1,23 @@
+version: 2
+jobs:
+    build:
+        docker:
+            - image: circleci/node:8.11.2
+        parallelism: 1
+        working_directory: ~/app
+        steps:
+            - checkout
+            - attach_workspace:
+                  at: ~/app
+            - restore_cache:
+                  key: multi-currency-app-{{ checksum "yarn.lock" }}
+            - run: yarn install
+            - save_cache:
+                  key: multi-currency-app-{{ checksum "yarn.lock" }}
+                  paths:
+                      - ./node_modules
+            - run: yarn build
+            - persist_to_workspace:
+                  root: .
+                  paths: dist
+            - run: yarn test
