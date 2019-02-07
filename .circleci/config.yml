@@ -12,7 +12,7 @@ jobs:
                 name: Configure dependencies
                 command: |
                     curl -o- -L https://yarnpkg.com/install.sh | bash
-                    source $BASH_ENV
+                    source ~/.bashrc
 
             - attach_workspace:
                   at: ~/app
