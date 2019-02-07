@@ -1,5 +1,26 @@
 version: 2
 jobs:
+    # Checkout code from Github, Install, & cache deps/devDeps.
+    checkout_code:
+        docker:
+            - image: circleci/node:8.11-browsers
+        working_directory: ~/vue-circleci
+        steps:
+            - checkout
+            - attach_workspace:
+                  at: ~/vue-circleci
+            - restore_cache:
+                  keys:
+                      - dependency-cache-{{ .Branch }}-{{ checksum "package-lock.json" }}
+                      - dependency-cache-{{ .Branch }}
+                      - dependency-cache-
+            - run: npm install
+            - save_cache:
+                  key: dependency-cache-{{ .Branch }}-{{ checksum "package-lock.json" }}
+                  paths: node_modules
+            - persist_to_workspace:
+                  root: .
+                  paths: .
     # Run NightWatch End-2-End Tests
     e2e_tests:
         docker:
