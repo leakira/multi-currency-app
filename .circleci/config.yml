@@ -2,11 +2,17 @@ version: 2
 jobs:
     build:
         docker:
-            - image: circleci/node:6.11.1-browsers
+            - image: circleci/node:7.10.0-browsers
         parallelism: 1
         working_directory: ~/app
         steps:
             - checkout
+
+            - run:
+                name: Configure dependencies
+                command: |
+                    apt-get install -t jessie-backports openjdk-8-jdk
+
             - attach_workspace:
                   at: ~/app
             - restore_cache:
