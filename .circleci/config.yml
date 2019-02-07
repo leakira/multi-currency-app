@@ -8,17 +8,11 @@ jobs:
         steps:
             - checkout
 
-            - run:
-                name: Configure dependencies
-                command: |
-                    curl -o- -L https://yarnpkg.com/install.sh | bash
-                    source ~/.bashrc
-
             - attach_workspace:
                   at: ~/app
             - restore_cache:
                   key: multi-currency-app-{{ checksum "yarn.lock" }}
-            - run: yarn install
+            - run: npm install
             - save_cache:
                   key: multi-currency-app-{{ checksum "yarn.lock" }}
                   paths:
