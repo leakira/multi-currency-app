@@ -22,14 +22,6 @@ jobs:
                   root: .
                   paths: .
 
-    # Run NightWatch End-2-End Tests
-    e2e_tests:
-        docker:
-            - image: circleci/node:8.11-browsers
-        working_directory: ~/vue-circleci
-        steps:
-            - attach_workspace:
-                  at: ~/vue-circleci
             - run: mkdir e2e-reports
             - run:
                   name: Download Selenium
@@ -43,15 +35,3 @@ jobs:
                   path: e2e-reports/
             - store_test_results:
                   path: e2e-reports/
-    # Build the project
-    build:
-        docker:
-            - image: circleci/node:8.11-browsers
-        working_directory: ~/vue-circleci
-        steps:
-            - attach_workspace:
-                  at: ~/vue-circleci
-            - run: npm run build
-            - persist_to_workspace:
-                  root: .
-                  paths: .
