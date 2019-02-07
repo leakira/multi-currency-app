@@ -5,7 +5,7 @@
         <div class="two fields">
             <div class="field">
                 <label for="value">{{ $t('app.currency.convert.value.input') }}</label>
-                <input id="value" type="text" v-model="model.value" :placeholder="$t('app.currency.convert.value.placeholder')">
+                <input id="value" type="number" v-model="model.value" :placeholder="$t('app.currency.convert.value.placeholder')" @keypress="isNumber">
             </div>
             <div class="field">
                 <label for="from">{{ $t('app.currency.convert.from.input') }}</label>

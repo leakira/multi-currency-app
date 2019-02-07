@@ -20,6 +20,7 @@
     }
 
     function languageRedirector(to, from, next) {
+        window.scrollTo(0,0)
         let language = to.params.lang || i18n.fallbackLocale
         if (languageIsValid(i18n, language) && i18n.locale !== to.params.lang)
             i18n.locale = language
